@@ -1,0 +1,10 @@
+<h4>Cantidad de establecimientos: @ViewBag.cantEstablecimientos<br><br><br>
+Cantidad de Votantes: @ViewBag.cantVotantes<br><br><br></h4>
+
+@{
+    for(int i = 0;i<ViewBag.cantEstablecimientos;i++){
+        <h5>Cantidad de personas en @ViewBag.nombresEstablecimientos[i] : @ViewBag.cantPersonasxEstablecimiento[i]</h5><br><br>;
+    }
+}
+
+<a href='@Url.Action("Index", "Home")'>Volver al index</a>

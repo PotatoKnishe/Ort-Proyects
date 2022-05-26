@@ -1,0 +1,35 @@
+﻿<!--
+    Explicacion de las funcionalidades:
+
+    - @ViewBag.aviso esta en todas las Views y es en caso de que se quiera decir algo
+
+    - El @ViewBag.Controlador es exclusivo de esta View y esta para verificar si el usuario voto
+
+    - A Persona se le agrego un atributo, fyhVoto, para asi poder mostrarla
+
+    - El DNI de Jony es como una forma de tener un perfil de administrador, el cual permite Resetear los votos y (en teoria), ver las estadisticas
+
+    - Cualquier consulta extra mandar un mensaje privado por el campus
+-->
+
+
+
+@{
+    ViewData["Title"] = "Padron";
+}
+
+<h3>@ViewBag.aviso</h3><br>
+@{
+    if(@ViewBag.Controlador == true){
+        <h3>En la fecha: @ViewBag.hora</h3>
+    }
+}
+
+<div class="text-center">
+    <h1 class="display-4">¡Bienvenidos al famoso Padron!</h1>    
+    <h2> Ingrese su DNI</h2>
+    <form method="GET" action='@Url.Action("ConsultaPadron", "Home")'>  
+        <input type="number" name="dni"></input>
+        <button type="submit">Enviar</button>
+    </form>
+</div>

@@ -1,0 +1,12 @@
+<h3>@ViewBag.aviso</h3>
+<br><br><br>
+<h3>Verifique que los datos sean correctos, y escriba su numero de tramite</h3>
+<form method="POST" action='@Url.Action("Votar", "Home")'>
+    DNI: <input type="text" name="dni" value="@ViewBag.ivan.DNI" readonly></input><br>
+    Apellido: <input type="text" name="apellido" value="@ViewBag.ivan.Apellido" readonly></input><br>
+    Establecimiento: <input type="text" name="establecimiento" value="@ViewBag.ort.Nombre" readonly><br>
+    Numero Tramite: <input type="number" name="numeroTramite"></input>
+    <button type="submit">Enviar</button>
+</form>
+<br>
+Si desea ingresar otro DNI presione <a href='@Url.Action("Index", "Home")'>aqui</a>
