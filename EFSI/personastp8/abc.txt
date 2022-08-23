@@ -1,0 +1,6 @@
+if(menorEdad.length == 1){
+    <h3>1</h3>
+}
+else{
+    <h3>2</h3>
+}
